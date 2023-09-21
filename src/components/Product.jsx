@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { title, price, images, description } = product;
-  console.log(product);
+    const { id, title, price, images, description } = product;
+    const navigate = useNavigate();
+    const handleDetails = () => {
+        navigate(`/products/${id}`)
+    }
   return (
     <div className="flex flex-col shadow-md rounded-md">
       <img
@@ -17,7 +21,7 @@ const Product = ({ product }) => {
         </div>
         <div className="flex justify-between">
           <p className="font-medium">Price: {price}$</p>
-          <button className="bg-gray-700 text-white py-2 px-4 rounded-md">View Details</button>
+          <button onClick={handleDetails} className="bg-gray-700 text-white py-2 px-4 rounded-md">View Details</button>
         </div>
       </div>
     </div>

@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div className="flex justify-between items-center shadow-md py-5 px-20">
-      <h1 className="text-3xl font-bold">Amajhon</h1>
-      <div className="flex gap-5 font-semibold">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/products">Products</NavLink>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+      <h1 className="text-3xl font-bold text-gray-800">Amajhon</h1>
+      <div className="flex items-center font-semibold">
+        <NavLink to="/" className="px-4">Home</NavLink>
+        <NavLink to="/products" className="px-4">Products</NavLink>
+        <NavLink to="/dashboard" className="px-4">Dashboard</NavLink>
       </div>
     </div>
   );

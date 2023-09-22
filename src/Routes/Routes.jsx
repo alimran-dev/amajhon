@@ -4,11 +4,13 @@ import Home from "../pages/Home";
 import Products from "../pages/Products/Products";
 import ProductDetails from "../pages/Products/ProductDetails";
 import DashboardLayout from "../Layouts/DashboardLayout";
+import Error from "../pages/Error";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -29,10 +31,10 @@ const routes = createBrowserRouter([
         path: "/dashboard",
         element: <DashboardLayout></DashboardLayout>,
         children: [
-        //   {
-        //     path: "/dashboard",
-        //     element: <div>Hello dashboard</div>,
-        //   },
+          {
+            path: "/dashboard",
+            element: <div>Hello dashboard</div>,
+          },
           {
             path: "/dashboard/profile",
             element: <div>Hello from profile</div>,
